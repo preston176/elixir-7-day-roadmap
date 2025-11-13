@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, feature/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Elixir
+      uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.15'
+        otp-version: '26'
+    
+    - name: Run Day 01 examples
+      run: elixir day01-basics/examples.exs
+    
+    - name: Run Day 02 examples
+      run: elixir day02-pattern-matching/examples.exs
+    
+    - name: Run Day 03 examples
+      run: elixir day03-processes-concurrency/examples.exs
+    
+    - name: Run Day 04 examples
+      run: elixir day04-genserver-supervision/examples.exs
+    
+    - name: Verify Day 05-06 READMEs exist
+      run: |
+        test -f day05-phoenix-framework/README.md
+        test -f day06-testing-elixir/README.md
+        test -f day07-final-project/README.md
+        echo "All documentation files verified ✓"
