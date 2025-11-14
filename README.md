@@ -1,5 +1,9 @@
 # elixir-7-day-roadmap
 
+[![CI](https://github.com/preston176/elixir-7-day-roadmap/actions/workflows/ci.yml/badge.svg)](https://github.com/preston176/elixir-7-day-roadmap/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Elixir](https://img.shields.io/badge/Elixir-1.15-blueviolet.svg)](https://elixir-lang.org/)
+
 A focused, practical 7-day learning roadmap for Elixir — written for JavaScript / Next.js developers who want to learn a productive, concurrent backend language.
 
 This repo is a day-by-day guide with short explanations, small code examples, and exercises so you can build real skills quickly.
@@ -56,5 +60,21 @@ Check official docs for your OS: https://elixir-lang.org/install.html and https:
 - /day07-final-project
 
 Follow the folders in order. Each README contains examples and exercises you can paste into `.exs` files and run with `elixir file.exs` or in IEx.
+
+## Quick start
+
+Run all examples locally:
+
+```bash
+make test
+```
+
+Or run individual days:
+
+```bash
+make test-day01
+make test-day02
+# ... etc
+```
 
 Happy learning — open an issue or PR if something can be clearer!
